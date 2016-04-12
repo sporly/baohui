@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="宝汇金融">
+		<meta name="description" content="宝汇金融">
+		<title>新闻中心</title>
+		<link rel="stylesheet" href="css/comm.css">
+		<link rel="stylesheet" href="css/css.css">
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jqPaginator.min.js" type="text/javascript"></script>
+		<script src="js/conm.js" type="text/javascript"></script>
+			
+	</head>
+
+	<body>
+		<div class="b-contain">
+			<div class="b-top">
+				<div class="b-header">
+					<div class="main clearfix">
+						<div class="fl">欢迎访问宝汇金融信息服务有限公司！</div>
+						<div class="fr">
+							<a href="#" class="icon-box icon-box1"><i></i>网站首页</a>
+							<a href="#" class="icon-box icon-box2"><i></i>法律声明</a>
+							<a href="#" class="icon-box icon-box3"><i></i>公司邮箱</a>
+						</div>
+					</div>
+				</div>
+				<div class="b-topcom ">
+					<div class="main clearfix">
+						<div class="logo-box fl">
+							<div class="logo"><img src="img/logo.jpg" alt="宝汇金融" /></div>
+						</div>
+						<div class="menu-box fr">
+							<div class="top-phone"><span class="icon-box"></span></div>
+							<div class="b-menu clearfix">
+								<img class="fl" src="img/angle.png" />
+								<ul class="fl clearfix menu">
+									<li class="cur">
+										<a class="item" href="#">首页</a><i class="bar"></i><b class="barcur"></b>
+									</li>
+									<li>
+										<a class="item" href="#">关于宝汇 </a><i class="bar"></i>
+										<div class="submenu clearfix">
+											<div class="li"><a class="icon-box" href="#"><i></i>公司简介</a></div>
+											<div class="li"><a class="icon-box" href="#"><i></i>投资理念</a></div>
+											
+										</div>
+									</li>
+									<li><a class="item" href="#">产品中心 </a><i class="bar"></i></li>
+									<li><a class="item" href="#">新闻中心</a><i class="bar"></i></li>
+									<li><a class="item" href="#">旗下产业 </a><i class="bar"></i></li>
+									<li><a class="item" href="#">风险控制 </a><i class="bar"></i></li>
+									<li><a class="item" href="#">联系我们</a><i class="bar"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--err S-->
+			<div class="err-content">
+				<div class="err-main">
+					<div class="err-box">
+						<div class="pic"><img src="img/404.png"/></div>
+						<strong>对不起，您的页面暂时未找到！</strong>
+						<p>您要查看的网页可能已被删除、名称已被更改，或者暂时不可用。</p>
+						<a href="index.html">返回首页</a><br/>
+						<span>（<span id="b-time">5</span>）秒之后返回首页</span>
+					</div>
+				</div>
+			</div>
+			<!--err E-->
+		</div>
+		<script type="text/javascript">
+			        /*定时跳转页面 S*/
+			        $(function(){
+			        	var obj = {
+			        		time:5,
+			        		run:function(){
+			        			var $this=this;
+			        			setInterval(function(){
+					        		$this.time=$this.time-1;
+					        		$("#b-time").text($this.time);
+					        		if($this.time==0){
+					        			window.location.href="index.html";
+					        		}
+			        	        },1000);
+			        		}
+			        	};
+			        	obj.run();
+			        })
+			       /*定时跳转页面 E*/ 
+		</script>
+	</body>
+
+</html>
